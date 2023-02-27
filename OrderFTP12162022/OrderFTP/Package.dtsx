@@ -1,0 +1,2609 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/15/2022 2:51:35 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-EGEBD6L"
+  DTS:CreatorName="GULFRELAY\aaloysius"
+  DTS:DTSID="{71ED9BF5-DCDF-41BD-BBD7-518B511541D8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{CF5DACCF-709A-4FAF-9E3D-FA4297E14CE2}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CD57734D-A53F-4499-873C-66337EC60E54}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="\\grsqlsvr01\b$\Trax\Orders\TRAX_MT_ORDERS.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order_ID"
+              DTS:DTSID="{9BFE04DC-C1A5-4D4F-9F49-2CF7F058FB4D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Record Type"
+              DTS:DTSID="{843CA909-4188-4D64-B966-6688716F9676}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Name"
+              DTS:DTSID="{F88295E9-7BAE-4B1C-AE6F-E463CB2F1B89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BILLING_ORG_NAME"
+              DTS:DTSID="{6F617C14-3A3F-4F19-8CF0-E294C49D861A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ORDER_STATUS"
+              DTS:DTSID="{FBB5E14C-4AB7-45DE-A32C-EFB57D9CF504}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Origin_Name"
+              DTS:DTSID="{BA1397B6-4949-4AE9-B94F-7D410160DC2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Origin_City"
+              DTS:DTSID="{95270DCC-07E7-4749-A800-4493E8F44CCB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Origin_ST"
+              DTS:DTSID="{10302BCA-29EF-455E-B4D3-FBDDE65B676B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Origin_Zip"
+              DTS:DTSID="{0DEACC9A-DAAA-42F8-A258-14E09728D88C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Origin_TimeZone"
+              DTS:DTSID="{4908DA98-F6C0-4E67-A2B4-33B202B577E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Dest_Name"
+              DTS:DTSID="{77243D82-C43B-46F7-8D1E-3DFB83521A5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Desintation_City"
+              DTS:DTSID="{FFACA745-7165-4B2F-A2A3-3AA854558F61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Destination_ST"
+              DTS:DTSID="{EB9C7B01-5002-4C0F-933F-17E771D37C60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Destination_Zip"
+              DTS:DTSID="{80A0FD62-0143-4A34-8B93-4C5E69CAB012}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Destination_TimeZone"
+              DTS:DTSID="{AB5B606E-E7BA-4607-9C4D-8C616B8A77EF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Est_Miles"
+              DTS:DTSID="{D4D7EBB4-AB50-4745-BF78-08F294C00743}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Carrier_Name"
+              DTS:DTSID="{03CC65E4-6E41-4870-9C2D-28BB8C58B026}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ServiceType"
+              DTS:DTSID="{699C219A-75EA-42DA-B86A-F811C7CA0171}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="quantity"
+              DTS:DTSID="{584A1328-DB63-4193-A7B0-3C97B2FE646F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="weight"
+              DTS:DTSID="{96BD1156-2DCF-4F69-888D-43F076C0296F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Quote_Status"
+              DTS:DTSID="{742E6A0C-FC1B-4485-9ACF-2C1BDBC2DA39}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Charge Code"
+              DTS:DTSID="{21B86C0A-7959-4635-8987-371671E160D4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Charge Description"
+              DTS:DTSID="{4E9B7A9C-92B6-4D3D-9905-00164481C6F6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Charge Amount"
+              DTS:DTSID="{68225646-C154-4383-B3AB-E905A3C9BE63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer Currency ID"
+              DTS:DTSID="{9B5A2958-2882-41CA-A241-2A3101A39A4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Carrier Charge Code"
+              DTS:DTSID="{95F07C32-CEDC-4A2A-A229-B3C3D485117E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Carrier Charge Description"
+              DTS:DTSID="{45E8C35F-0BAD-47BB-9883-E96914628EA6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Carrier Charge Amount"
+              DTS:DTSID="{21D014FC-7FEE-4CAC-897F-58A0CA73DD56}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Carrier Currency ID"
+              DTS:DTSID="{12B55BBD-E0C2-4A96-B0DA-39B864F1B0F1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PO_NUM"
+              DTS:DTSID="{6CE53F3A-2A6D-4940-8260-3646DC63BDBB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SHIPPER_NUM"
+              DTS:DTSID="{4E3D2B69-2F55-449A-8461-4BBA91D2F132}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ref_1"
+              DTS:DTSID="{5AA3E431-B3BA-4D6F-8C21-8C1A0ED67EE9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EXTERNAL_ID"
+              DTS:DTSID="{19A0A6AA-1CA5-495E-9797-EB832B703F50}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Create_Date"
+              DTS:DTSID="{217882F2-88C5-4E79-8C37-365872820DE1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PU_Window_Start"
+              DTS:DTSID="{CF74B95D-964F-47CF-9B6D-D5C4A5C0BEEB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PU_Window_End"
+              DTS:DTSID="{D6B93D8A-A53F-4474-B1F6-F28414BC2B14}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PU_Appt_Window_Start"
+              DTS:DTSID="{038A7F59-3A91-4DEC-9EDF-1020E225BA2E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PU_Appt_Window_End"
+              DTS:DTSID="{6F6B5B28-2A89-4FF6-BF4D-7F2A652ED8B7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Pickup_Actual"
+              DTS:DTSID="{FF53F3AD-3D52-4E6E-9C50-D2DDF57229BF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEL__Window_Start"
+              DTS:DTSID="{1FE56048-ECB0-4304-8940-C2FD09ADBB58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEL_Window_End"
+              DTS:DTSID="{C8B5C0A5-B185-4333-B580-2933C1998995}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEL_Appt_Window_Start"
+              DTS:DTSID="{7B3F9D61-8CB4-485D-A44C-656A68225356}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DEL_Appt_Window_End"
+              DTS:DTSID="{888DD296-648A-4CEB-80CD-6C80B063D332}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Delivery_Actual_UTC"
+              DTS:DTSID="{19427023-5135-468D-BC59-BF33B09FF788}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Last_Updated"
+              DTS:DTSID="{5484B8E0-A1C1-4584-9E07-A9677480A134}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[GRSQLSVR01.gulfrelay.local.gfra_1710]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4B7924B9-A807-448C-95E9-808FD47EB1FF}"
+      DTS:ObjectName="GRSQLSVR01.gulfrelay.local.gfra_1710">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=GRSQLSVR01.gulfrelay.local;Initial Catalog=ITDevelopersDB;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{4B7924B9-A807-448C-95E9-808FD47EB1FF}GRSQLSVR01.gulfrelay.local.gfra_1710;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SMTP Connection Manager]"
+      DTS:CreationName="SMTP"
+      DTS:Description="Email"
+      DTS:DTSID="{42BCDBC6-1B0C-4AA2-90AE-77C9B05D57B9}"
+      DTS:ObjectName="SMTP Connection Manager">
+      <DTS:ObjectData>
+        <SmtpConnectionManager
+          ConnectionString="SmtpServer=smtp01.gulfrelay.com;UseWindowsAuthentication=False;EnableSsl=False;"
+          ConnectByProxy="False" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D8A91D45-B747-4CFD-BFA2-46FE4322DD5C}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="VarArchivePath">
+      <DTS:VariableValue
+        DTS:DataType="8">\\grsqlsvr01\b$\Trax\Orders\Archive</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E326B5FE-B799-4003-889A-3854D18416A7}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="VarFileNameWithArchivePath">
+      <DTS:VariableValue
+        DTS:DataType="8">\\grsqlsvr01\b$\Trax\Orders\Archive\TRAX_MT_ORDERS.CSV</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5E4E44DF-3857-4DEB-932F-0B4E15A08B8E}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="VarFileNameWithFullPath">
+      <DTS:VariableValue
+        DTS:DataType="8">\\grsqlsvr01\b$\Trax\Orders\TRAX_MT_ORDERS.CSV</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{B318D98E-6DAC-404C-AAEC-3559BCEA943A}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="REPLACE( @[User::VarFileNameWithArchivePath], &quot;.CSV&quot;,&quot;&quot;) +&quot;_&quot;  &#xA;+RIGHT(&quot;0&quot; + (DT_STR,4,1252) DatePart(&quot;m&quot;,getdate()),2)+Right(&quot;0&quot; + (DT_STR,4,1252) DatePart(&quot;d&quot;,getdate()),2)+Right(&quot;0&quot; + (DT_STR,4,1252) DatePart(&quot;yyyy&quot;,getdate()),4)+&quot; &quot;+Right(&quot;0&quot; + (DT_STR,4,1252) DatePart(&quot;hh&quot;,getdate()),2)+&quot;_&quot;+Right(&quot;0&quot; + (DT_STR,4,1252) DatePart(&quot;mi&quot;,getdate()),2)+&quot;_&quot;+Right(&quot;0&quot; + (DT_STR,4,1252) DatePart(&quot;ss&quot;,getdate()),2) + &quot;.CSV&quot;"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="VarNewfileNameWithArchivePath">
+      <DTS:VariableValue
+        DTS:DataType="8">\\grsqlsvr01\b$\Trax\Orders\Archive\TRAX_MT_ORDERS_12192022 20_19_30.CSV</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{68C3F8A3-2FBF-4EEE-8C81-4FB5E76C1D7C}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="VarTotalRows">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BD17600F-9205-458D-B59C-FCD69BB3FC86}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="VerFileName">
+      <DTS:VariableValue
+        DTS:DataType="8">TRAX_MT_ORDERS.CSV</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Copy file to Archive folder"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{AEED44A4-653B-4BD9-B112-CA59D2EC1BE1}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Copy file to Archive folder"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskSourcePath="User::VarFileNameWithFullPath"
+          TaskIsSourceVariable="True"
+          TaskDestinationPath="User::VarArchivePath"
+          TaskIsDestinationVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Create  CSV File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4E73C647-9C7C-4517-BDBE-C8132D91768D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create  CSV File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Create  CSV File\Order data"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Order data"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Orders_temp]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select    *  from RROrder_FTP 
+where Order_Id NOT IN (select Order_ID from Order_FTP_Log)
+--and Order_Id in ('GRL-ACE4-100','GRL-ACE4-101','GRL-ACE4-103')
+order by Order_Id,[Record Type]</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create  CSV File\Order data.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[GRSQLSVR01.gulfrelay.local.gfra_1710]"
+                  connectionManagerRefId="Package.ConnectionManagers[GRSQLSVR01.gulfrelay.local.gfra_1710]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Order_ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Order_ID]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Order_ID]"
+                      name="Order_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Record Type]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Record Type]"
+                      length="6"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Record Type]"
+                      name="Record Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer_Name]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer_Name]"
+                      name="Customer_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[BILLING_ORG_NAME]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[BILLING_ORG_NAME]"
+                      length="4000"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[BILLING_ORG_NAME]"
+                      name="BILLING_ORG_NAME"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[ORDER_STATUS]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[ORDER_STATUS]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[ORDER_STATUS]"
+                      name="ORDER_STATUS"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_Name]"
+                      length="4000"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_Name]"
+                      name="Origin_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_City]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_City]"
+                      name="Origin_City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_ST]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_ST]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_ST]"
+                      name="Origin_ST"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_Zip]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_Zip]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_Zip]"
+                      name="Origin_Zip"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_TimeZone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_TimeZone]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_TimeZone]"
+                      name="Origin_TimeZone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Dest_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Dest_Name]"
+                      length="4000"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Dest_Name]"
+                      name="Dest_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Desintation_City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Desintation_City]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Desintation_City]"
+                      name="Desintation_City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_ST]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Destination_ST]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_ST]"
+                      name="Destination_ST"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_Zip]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Destination_Zip]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_Zip]"
+                      name="Destination_Zip"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_TimeZone]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Destination_TimeZone]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_TimeZone]"
+                      name="Destination_TimeZone"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Est_Miles]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Est_Miles]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Est_Miles]"
+                      name="Est_Miles"
+                      precision="38"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier_Name]"
+                      length="600"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier_Name]"
+                      name="Carrier_Name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[ServiceType]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[ServiceType]"
+                      length="3"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[ServiceType]"
+                      name="ServiceType"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[quantity]"
+                      name="quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[weight]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[weight]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[weight]"
+                      name="weight"
+                      precision="38"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Quote_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Quote_Status]"
+                      length="16"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Quote_Status]"
+                      name="Quote_Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer Charge Code]"
+                      length="5"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Code]"
+                      name="Customer Charge Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer Charge Description]"
+                      length="150"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Description]"
+                      name="Customer Charge Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Amount]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer Charge Amount]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Amount]"
+                      name="Customer Charge Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Currency ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer Currency ID]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Currency ID]"
+                      name="Customer Currency ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier Charge Code]"
+                      length="5"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Code]"
+                      name="Carrier Charge Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Description]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier Charge Description]"
+                      length="150"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Description]"
+                      name="Carrier Charge Description"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Amount]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier Charge Amount]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Amount]"
+                      name="Carrier Charge Amount"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Currency ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier Currency ID]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Currency ID]"
+                      name="Carrier Currency ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PO_NUM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PO_NUM]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PO_NUM]"
+                      name="PO_NUM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[SHIPPER_NUM]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[SHIPPER_NUM]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[SHIPPER_NUM]"
+                      name="SHIPPER_NUM"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Ref_1]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Ref_1]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Ref_1]"
+                      name="Ref_1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[EXTERNAL_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[EXTERNAL_ID]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[EXTERNAL_ID]"
+                      name="EXTERNAL_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Create_Date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Create_Date]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Create_Date]"
+                      name="Create_Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Window_Start]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PU_Window_Start]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Window_Start]"
+                      name="PU_Window_Start"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Window_End]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PU_Window_End]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Window_End]"
+                      name="PU_Window_End"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Appt_Window_Start]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PU_Appt_Window_Start]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Appt_Window_Start]"
+                      name="PU_Appt_Window_Start"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Appt_Window_End]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PU_Appt_Window_End]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Appt_Window_End]"
+                      name="PU_Appt_Window_End"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Pickup_Actual]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Pickup_Actual]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Pickup_Actual]"
+                      name="Pickup_Actual"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL__Window_Start]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[DEL__Window_Start]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL__Window_Start]"
+                      name="DEL__Window_Start"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Window_End]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[DEL_Window_End]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Window_End]"
+                      name="DEL_Window_End"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Appt_Window_Start]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[DEL_Appt_Window_Start]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Appt_Window_Start]"
+                      name="DEL_Appt_Window_Start"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Appt_Window_End]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[DEL_Appt_Window_End]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Appt_Window_End]"
+                      name="DEL_Appt_Window_End"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Delivery_Actual_UTC]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Delivery_Actual_UTC]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Delivery_Actual_UTC]"
+                      name="Delivery_Actual_UTC"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Last_Updated]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Last_Updated]"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Last_Updated]"
+                      name="Last_Updated"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Order_ID]"
+                      dataType="wstr"
+                      length="500"
+                      name="Order_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Record Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      name="Record Type" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer_Name]"
+                      dataType="wstr"
+                      length="500"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[BILLING_ORG_NAME]"
+                      dataType="wstr"
+                      length="4000"
+                      name="BILLING_ORG_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[ORDER_STATUS]"
+                      dataType="wstr"
+                      length="500"
+                      name="ORDER_STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_Name]"
+                      dataType="wstr"
+                      length="4000"
+                      name="Origin_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_City]"
+                      dataType="wstr"
+                      length="500"
+                      name="Origin_City" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_ST]"
+                      dataType="wstr"
+                      length="500"
+                      name="Origin_ST" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_Zip]"
+                      dataType="wstr"
+                      length="500"
+                      name="Origin_Zip" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Origin_TimeZone]"
+                      dataType="wstr"
+                      length="500"
+                      name="Origin_TimeZone" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Dest_Name]"
+                      dataType="wstr"
+                      length="4000"
+                      name="Dest_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Desintation_City]"
+                      dataType="wstr"
+                      length="500"
+                      name="Desintation_City" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Destination_ST]"
+                      dataType="wstr"
+                      length="500"
+                      name="Destination_ST" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Destination_Zip]"
+                      dataType="wstr"
+                      length="500"
+                      name="Destination_Zip" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Destination_TimeZone]"
+                      dataType="wstr"
+                      length="500"
+                      name="Destination_TimeZone" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Est_Miles]"
+                      dataType="numeric"
+                      name="Est_Miles"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier_Name]"
+                      dataType="wstr"
+                      length="600"
+                      name="Carrier_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[ServiceType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      name="ServiceType" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[weight]"
+                      dataType="numeric"
+                      name="weight"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Quote_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      name="Quote_Status" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer Charge Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Customer Charge Code" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer Charge Description]"
+                      dataType="wstr"
+                      length="150"
+                      name="Customer Charge Description" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer Charge Amount]"
+                      dataType="cy"
+                      name="Customer Charge Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Customer Currency ID]"
+                      dataType="wstr"
+                      length="500"
+                      name="Customer Currency ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier Charge Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Carrier Charge Code" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier Charge Description]"
+                      dataType="wstr"
+                      length="150"
+                      name="Carrier Charge Description" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier Charge Amount]"
+                      dataType="cy"
+                      name="Carrier Charge Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Carrier Currency ID]"
+                      dataType="wstr"
+                      length="500"
+                      name="Carrier Currency ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PO_NUM]"
+                      dataType="wstr"
+                      length="500"
+                      name="PO_NUM" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[SHIPPER_NUM]"
+                      dataType="wstr"
+                      length="500"
+                      name="SHIPPER_NUM" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Ref_1]"
+                      dataType="i4"
+                      name="Ref_1" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[EXTERNAL_ID]"
+                      dataType="i4"
+                      name="EXTERNAL_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Create_Date]"
+                      dataType="wstr"
+                      length="500"
+                      name="Create_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PU_Window_Start]"
+                      dataType="wstr"
+                      length="500"
+                      name="PU_Window_Start" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PU_Window_End]"
+                      dataType="wstr"
+                      length="500"
+                      name="PU_Window_End" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PU_Appt_Window_Start]"
+                      dataType="i4"
+                      name="PU_Appt_Window_Start" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[PU_Appt_Window_End]"
+                      dataType="i4"
+                      name="PU_Appt_Window_End" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Pickup_Actual]"
+                      dataType="wstr"
+                      length="500"
+                      name="Pickup_Actual" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[DEL__Window_Start]"
+                      dataType="wstr"
+                      length="500"
+                      name="DEL__Window_Start" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[DEL_Window_End]"
+                      dataType="wstr"
+                      length="500"
+                      name="DEL_Window_End" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[DEL_Appt_Window_Start]"
+                      dataType="i4"
+                      name="DEL_Appt_Window_Start" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[DEL_Appt_Window_End]"
+                      dataType="i4"
+                      name="DEL_Appt_Window_End" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Delivery_Actual_UTC]"
+                      dataType="wstr"
+                      length="500"
+                      name="Delivery_Actual_UTC" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].ExternalColumns[Last_Updated]"
+                      dataType="wstr"
+                      length="500"
+                      name="Last_Updated" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Order_ID]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Order_ID]"
+                      name="Order_ID" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Record Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="6"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Record Type]"
+                      name="Record Type" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer_Name]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer_Name]"
+                      name="Customer_Name" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[BILLING_ORG_NAME]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[BILLING_ORG_NAME]"
+                      name="BILLING_ORG_NAME" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[ORDER_STATUS]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[ORDER_STATUS]"
+                      name="ORDER_STATUS" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_Name]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_Name]"
+                      name="Origin_Name" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_City]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_City]"
+                      name="Origin_City" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_ST]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_ST]"
+                      name="Origin_ST" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_Zip]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_Zip]"
+                      name="Origin_Zip" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_TimeZone]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Origin_TimeZone]"
+                      name="Origin_TimeZone" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Dest_Name]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Dest_Name]"
+                      name="Dest_Name" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Desintation_City]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Desintation_City]"
+                      name="Desintation_City" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Destination_ST]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Destination_ST]"
+                      name="Destination_ST" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Destination_Zip]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Destination_Zip]"
+                      name="Destination_Zip" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Destination_TimeZone]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Destination_TimeZone]"
+                      name="Destination_TimeZone" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Est_Miles]"
+                      dataType="numeric"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Est_Miles]"
+                      name="Est_Miles"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier_Name]"
+                      dataType="wstr"
+                      length="600"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier_Name]"
+                      name="Carrier_Name" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[ServiceType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="3"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[ServiceType]"
+                      name="ServiceType" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[quantity]"
+                      name="quantity" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[weight]"
+                      dataType="numeric"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[weight]"
+                      name="weight"
+                      precision="38" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Quote_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="16"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Quote_Status]"
+                      name="Quote_Status" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer Charge Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer Charge Code]"
+                      name="Customer Charge Code" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer Charge Description]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer Charge Description]"
+                      name="Customer Charge Description" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer Charge Amount]"
+                      dataType="cy"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer Charge Amount]"
+                      name="Customer Charge Amount" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer Currency ID]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Customer Currency ID]"
+                      name="Customer Currency ID" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier Charge Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier Charge Code]"
+                      name="Carrier Charge Code" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier Charge Description]"
+                      dataType="wstr"
+                      length="150"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier Charge Description]"
+                      name="Carrier Charge Description" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier Charge Amount]"
+                      dataType="cy"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier Charge Amount]"
+                      name="Carrier Charge Amount" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier Currency ID]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Carrier Currency ID]"
+                      name="Carrier Currency ID" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PO_NUM]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PO_NUM]"
+                      name="PO_NUM" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[SHIPPER_NUM]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[SHIPPER_NUM]"
+                      name="SHIPPER_NUM" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Ref_1]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Ref_1]"
+                      name="Ref_1" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[EXTERNAL_ID]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[EXTERNAL_ID]"
+                      name="EXTERNAL_ID" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Create_Date]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Create_Date]"
+                      name="Create_Date" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PU_Window_Start]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PU_Window_Start]"
+                      name="PU_Window_Start" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PU_Window_End]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PU_Window_End]"
+                      name="PU_Window_End" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PU_Appt_Window_Start]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PU_Appt_Window_Start]"
+                      name="PU_Appt_Window_Start" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PU_Appt_Window_End]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[PU_Appt_Window_End]"
+                      name="PU_Appt_Window_End" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Pickup_Actual]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Pickup_Actual]"
+                      name="Pickup_Actual" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[DEL__Window_Start]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[DEL__Window_Start]"
+                      name="DEL__Window_Start" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[DEL_Window_End]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[DEL_Window_End]"
+                      name="DEL_Window_End" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[DEL_Appt_Window_Start]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[DEL_Appt_Window_Start]"
+                      name="DEL_Appt_Window_Start" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[DEL_Appt_Window_End]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[DEL_Appt_Window_End]"
+                      name="DEL_Appt_Window_End" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Delivery_Actual_UTC]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Delivery_Actual_UTC]"
+                      name="Delivery_Actual_UTC" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Last_Updated]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[Last_Updated]"
+                      name="Last_Updated" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1033"
+              name="TRAX_MT_ORDERS csv file creation">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Order_ID]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Order_ID"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Order_ID]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Order_ID]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Record Type]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="6"
+                      cachedName="Record Type"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Record Type]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Record Type]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Customer_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[BILLING_ORG_NAME]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="BILLING_ORG_NAME"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[BILLING_ORG_NAME]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[BILLING_ORG_NAME]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[ORDER_STATUS]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ORDER_STATUS"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[ORDER_STATUS]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[ORDER_STATUS]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Origin_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="Origin_Name"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_Name]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_Name]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Origin_City]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Origin_City"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_City]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_City]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Origin_ST]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Origin_ST"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_ST]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_ST]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Origin_Zip]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Origin_Zip"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_Zip]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_Zip]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Origin_TimeZone]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Origin_TimeZone"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_TimeZone]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Origin_TimeZone]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Dest_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="4000"
+                      cachedName="Dest_Name"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Dest_Name]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Dest_Name]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Desintation_City]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Desintation_City"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Desintation_City]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Desintation_City]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Destination_ST]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Destination_ST"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Destination_ST]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_ST]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Destination_Zip]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Destination_Zip"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Destination_Zip]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_Zip]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Destination_TimeZone]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Destination_TimeZone"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Destination_TimeZone]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Destination_TimeZone]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Est_Miles]"
+                      cachedDataType="numeric"
+                      cachedName="Est_Miles"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Est_Miles]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Est_Miles]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Carrier_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="600"
+                      cachedName="Carrier_Name"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier_Name]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier_Name]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[ServiceType]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="3"
+                      cachedName="ServiceType"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[ServiceType]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[ServiceType]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[quantity]"
+                      cachedDataType="i4"
+                      cachedName="quantity"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[quantity]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[quantity]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[weight]"
+                      cachedDataType="numeric"
+                      cachedName="weight"
+                      cachedPrecision="38"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[weight]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[weight]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Quote_Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="16"
+                      cachedName="Quote_Status"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Quote_Status]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Quote_Status]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Customer Charge Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Customer Charge Code"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer Charge Code]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Code]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Customer Charge Description]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Customer Charge Description"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer Charge Description]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Description]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Customer Charge Amount]"
+                      cachedDataType="cy"
+                      cachedName="Customer Charge Amount"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer Charge Amount]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Charge Amount]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Customer Currency ID]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Customer Currency ID"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer Currency ID]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Customer Currency ID]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Carrier Charge Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="Carrier Charge Code"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier Charge Code]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Code]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Carrier Charge Description]"
+                      cachedDataType="wstr"
+                      cachedLength="150"
+                      cachedName="Carrier Charge Description"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier Charge Description]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Description]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Carrier Charge Amount]"
+                      cachedDataType="cy"
+                      cachedName="Carrier Charge Amount"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier Charge Amount]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Charge Amount]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Carrier Currency ID]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Carrier Currency ID"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier Currency ID]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Carrier Currency ID]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[PO_NUM]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="PO_NUM"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PO_NUM]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PO_NUM]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[SHIPPER_NUM]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="SHIPPER_NUM"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[SHIPPER_NUM]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[SHIPPER_NUM]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Ref_1]"
+                      cachedDataType="i4"
+                      cachedName="Ref_1"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Ref_1]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Ref_1]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[EXTERNAL_ID]"
+                      cachedDataType="i4"
+                      cachedName="EXTERNAL_ID"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[EXTERNAL_ID]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[EXTERNAL_ID]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Create_Date]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Create_Date"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Create_Date]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Create_Date]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[PU_Window_Start]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="PU_Window_Start"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PU_Window_Start]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Window_Start]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[PU_Window_End]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="PU_Window_End"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PU_Window_End]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Window_End]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[PU_Appt_Window_Start]"
+                      cachedDataType="i4"
+                      cachedName="PU_Appt_Window_Start"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PU_Appt_Window_Start]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Appt_Window_Start]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[PU_Appt_Window_End]"
+                      cachedDataType="i4"
+                      cachedName="PU_Appt_Window_End"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PU_Appt_Window_End]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[PU_Appt_Window_End]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Pickup_Actual]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Pickup_Actual"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Pickup_Actual]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Pickup_Actual]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[DEL__Window_Start]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DEL__Window_Start"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[DEL__Window_Start]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL__Window_Start]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[DEL_Window_End]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="DEL_Window_End"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[DEL_Window_End]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Window_End]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[DEL_Appt_Window_Start]"
+                      cachedDataType="i4"
+                      cachedName="DEL_Appt_Window_Start"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[DEL_Appt_Window_Start]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Appt_Window_Start]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[DEL_Appt_Window_End]"
+                      cachedDataType="i4"
+                      cachedName="DEL_Appt_Window_End"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[DEL_Appt_Window_End]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[DEL_Appt_Window_End]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Delivery_Actual_UTC]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Delivery_Actual_UTC"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Delivery_Actual_UTC]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Delivery_Actual_UTC]" />
+                    <inputColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].Columns[Last_Updated]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="Last_Updated"
+                      externalMetadataColumnId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Last_Updated]"
+                      lineageId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output].Columns[Last_Updated]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Order_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Order_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Record Type]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Record Type" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[BILLING_ORG_NAME]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="BILLING_ORG_NAME" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[ORDER_STATUS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ORDER_STATUS" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Origin_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Origin_City" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_ST]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Origin_ST" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_Zip]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Origin_Zip" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Origin_TimeZone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Origin_TimeZone" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Dest_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Dest_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Desintation_City]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Desintation_City" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Destination_ST]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Destination_ST" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Destination_Zip]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Destination_Zip" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Destination_TimeZone]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Destination_TimeZone" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Est_Miles]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Est_Miles" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier_Name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Carrier_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[ServiceType]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ServiceType" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[quantity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[weight]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="weight" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Quote_Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Quote_Status" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer Charge Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Customer Charge Code" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer Charge Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Customer Charge Description" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer Charge Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Customer Charge Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Customer Currency ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Customer Currency ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier Charge Code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Carrier Charge Code" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier Charge Description]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Carrier Charge Description" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier Charge Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Carrier Charge Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Carrier Currency ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Carrier Currency ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PO_NUM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PO_NUM" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[SHIPPER_NUM]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SHIPPER_NUM" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Ref_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Ref_1" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[EXTERNAL_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="EXTERNAL_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Create_Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Create_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PU_Window_Start]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PU_Window_Start" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PU_Window_End]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PU_Window_End" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PU_Appt_Window_Start]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PU_Appt_Window_Start" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[PU_Appt_Window_End]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="PU_Appt_Window_End" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Pickup_Actual]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Pickup_Actual" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[DEL__Window_Start]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEL__Window_Start" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[DEL_Window_End]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEL_Window_End" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[DEL_Appt_Window_Start]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEL_Appt_Window_Start" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[DEL_Appt_Window_End]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="DEL_Appt_Window_End" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Delivery_Actual_UTC]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Delivery_Actual_UTC" />
+                    <externalMetadataColumn
+                      refId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input].ExternalColumns[Last_Updated]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Last_Updated" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Create  CSV File.Paths[OLE DB Source Output]"
+              endId="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Create  CSV File\Order data.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Email for no data"
+      DTS:CreationName="Microsoft.SendMailTask"
+      DTS:Description="Send Mail Task"
+      DTS:DTSID="{C5EB101C-8103-4E41-8EE4-883494548B0E}"
+      DTS:ExecutableType="Microsoft.SendMailTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Email for no data"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SendMailTask:SendMailTaskData
+          SendMailTask:SMTPServer="{42BCDBC6-1B0C-4AA2-90AE-77C9B05D57B9}"
+          SendMailTask:From="donotreply@gulfrelay.com"
+          SendMailTask:To="aaloysius@gulfrelay.com"
+          SendMailTask:Subject="Trax Order File"
+          SendMailTask:MessageSource="No data file has generated due to no order data at this time." xmlns:SendMailTask="www.microsoft.com/sqlserver/dts/tasks/sendmailtask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert  processed  orders to log file"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E7432307-5C63-4609-84D6-1A7808D796C6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert  processed  orders to log file"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4B7924B9-A807-448C-95E9-808FD47EB1FF}"
+          SQLTask:SqlStatementSource="Insert into Order_FTP_Log (Order_ID) &#xA;select  Order_Id  from Orders_temp &#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Insert data into temp table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{CE26C3AE-017F-412A-A5A9-C9309AD42496}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert data into temp table"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4B7924B9-A807-448C-95E9-808FD47EB1FF}"
+          SQLTask:SqlStatementSource="Truncate table Orders_temp&#xA;Go&#xA;Insert into Orders_temp &#xA;select *  from RROrder_FTP &#xA;where Order_Id NOT IN (select Order_ID from Order_FTP_Log)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Is any row exist"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{26BEEAA8-8F8A-454F-A413-55B99FA861E6}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Is any row exist"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{4B7924B9-A807-448C-95E9-808FD47EB1FF}"
+          SQLTask:SqlStatementSource="&#xA;SELECT COUNT(*) FROM Orders_temp"
+          SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ResultBinding
+            SQLTask:ResultName="0"
+            SQLTask:DtsVariableName="User::VarTotalRows" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Rename file with datetime"
+      DTS:CreationName="Microsoft.FileSystemTask"
+      DTS:Description="File System Task"
+      DTS:DTSID="{F7B00179-E86B-417D-8A73-78326A3834E8}"
+      DTS:ExecutableType="Microsoft.FileSystemTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Rename file with datetime"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <FileSystemData
+          TaskOperationType="RenameFile"
+          TaskSourcePath="User::VarFileNameWithArchivePath"
+          TaskIsSourceVariable="True"
+          TaskDestinationPath="User::VarNewfileNameWithArchivePath"
+          TaskIsDestinationVariable="True" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{FF441BF8-B769-4A13-9072-C1E34BA97138}"
+      DTS:From="Package\Create  CSV File"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Insert  processed  orders to log file" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{5F088AF1-0874-4BEB-95C6-BDABD3930936}"
+      DTS:From="Package\Insert  processed  orders to log file"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Copy file to Archive folder" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{7B1390DD-B590-42BF-9B2B-E16F7F61CD55}"
+      DTS:From="Package\Copy file to Archive folder"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Rename file with datetime" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{A2F251A7-8020-4CA4-A109-972709D558B8}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::VarTotalRows] &gt; 0"
+      DTS:From="Package\Is any row exist"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Create  CSV File" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{FC932D46-B444-4263-B782-E50C7124928F}"
+      DTS:From="Package\Insert data into temp table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Is any row exist" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{8494A1D9-2B91-472D-8AED-16BA0A27877F}"
+      DTS:EvalOp="3"
+      DTS:Expression="@[User::VarTotalRows] == 0"
+      DTS:From="Package\Is any row exist"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Email for no data" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="204,42"
+          Id="Package\Copy file to Archive folder"
+          TopLeft="450,343" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Create  CSV File"
+          TopLeft="470,182" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Email for no data"
+          TopLeft="752,102" />
+        <NodeLayout
+          Size="247,42"
+          Id="Package\Insert  processed  orders to log file"
+          TopLeft="433,267" />
+        <NodeLayout
+          Size="206,42"
+          Id="Package\Insert data into temp table"
+          TopLeft="446,23" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Is any row exist"
+          TopLeft="476,106" />
+        <NodeLayout
+          Size="205,42"
+          Id="Package\Rename file with datetime"
+          TopLeft="456,431" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="553.5,224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43"
+              Start="0,0"
+              End="0,35.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="554.25,309">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="555.25,385">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="551.75,148">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34"
+              Start="0,0"
+              End="0,26.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-8,5.25,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="551,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41"
+              Start="0,0"
+              End="0,33.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="630,125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="122,0"
+              Start="0,0"
+              End="114.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="114.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="49.25,5,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Create  CSV File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="262,42"
+          Id="Package\Create  CSV File\TRAX_MT_ORDERS csv file creation"
+          TopLeft="486,267" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Create  CSV File\Order data"
+          TopLeft="533,64" />
+        <EdgeLayout
+          Id="Package\Create  CSV File.Paths[OLE DB Source Output]"
+          TopLeft="598.5,106">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="18.5,161"
+              Start="0,0"
+              End="18.5,153.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,76.5"
+                    Point2="0,80.5"
+                    Point3="4,80.5" />
+                  <mssgle:LineSegment
+                    End="14.5,80.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="14.5,80.5"
+                    Point2="18.5,80.5"
+                    Point3="18.5,84.5" />
+                  <mssgle:LineSegment
+                    End="18.5,153.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Create  CSV File\Order data">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
